@@ -4,12 +4,15 @@
   "description": "JS collections library inspired by Scala",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --reporters jest-junit"
   },
   "keywords": [],
   "author": "Norbert Kowalik",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3"
   }
 }
