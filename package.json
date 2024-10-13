@@ -1,0 +1,15 @@
+{
+  "name": "@shooktea/seira",
+  "version": "1.0.0",
+  "description": "JS collections library inspired by Scala",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Norbert Kowalik",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
