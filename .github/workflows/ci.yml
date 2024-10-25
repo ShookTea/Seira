@@ -40,7 +40,6 @@ jobs:
           name: built-library
           path: dist
       - run: npm version $GITHUB_REF_NAME
-      - run: cat package.json
       - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
