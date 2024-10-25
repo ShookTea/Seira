@@ -39,7 +39,7 @@ jobs:
         with:
           name: built-library
           path: dist
-      - run: npm version $GITHUB_REF_NAME
+      - run: npm version --no-git-tag-version $GITHUB_REF_NAME
       - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
