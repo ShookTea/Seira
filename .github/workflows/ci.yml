@@ -33,6 +33,7 @@ jobs:
     if: startsWith(github.event.ref, 'refs/tags/')
     needs: unit-test
     permissions:
+      contents: read
       id-token: write
     steps:
       - uses: actions/checkout@v2
