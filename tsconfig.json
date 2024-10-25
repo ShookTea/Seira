@@ -15,9 +15,10 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "baseUrl": ".",
     "jsx": "react-jsx",
+    "outDir": "./dist",
+    "declaration": true
   },
   "include": ["src"]
 }

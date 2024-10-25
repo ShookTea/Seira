@@ -2,13 +2,17 @@
   "name": "@shooktea/seira",
   "version": "1.0.0",
   "description": "JS collections library inspired by Scala",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --reporters jest-junit"
-  },
-  "keywords": [],
   "author": "Norbert Kowalik",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "jest --reporters jest-junit",
+    "build": "tsc"
+  },
   "devDependencies": {
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",
