@@ -30,7 +30,7 @@ jobs:
 
   release-tag:
     runs-on: ubuntu-latest
-#    if: startsWith(github.event.ref, 'refs/tags/v')
+    if: startsWith(github.event.ref, 'refs/tags/')
     needs: unit-test
     steps:
       - uses: actions/checkout@v2
@@ -39,10 +39,8 @@ jobs:
         with:
           name: built-library
           path: dist
-      - run: ls -la
-      - run: ls -la dist
       - run: npm version $GITHUB_REF_NAME
       - run: cat package.json
-#      - run: npm publish --provenance --access public
-#        env:
-#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
