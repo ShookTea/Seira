@@ -112,7 +112,7 @@ export function iterableOnceTestUtils(creator: (values: number[]) => IterableOnc
       ).toEqual(5);
       expect(
         creator([3, 1])
-          .reduceLeft(10, (a, b) => a * 2 + b)
+          .reduceLeft(0, (a, b) => a * 2 + b)
       ).toEqual(7);
       expect(
         creator([1, 3, 5])
