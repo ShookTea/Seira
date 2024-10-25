@@ -13,6 +13,9 @@
     "test": "jest --reporters jest-junit",
     "build": "tsc"
   },
+  "repository": {
+    "url": "https://github.com/ShookTea/Seira"
+  },
   "devDependencies": {
     "jest": "^29.7.0",
     "jest-junit": "^16.0.0",
