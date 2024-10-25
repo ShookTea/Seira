@@ -23,3 +23,20 @@ jobs:
           path: junit.xml
           reporter: jest-junit
       - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: built-library
+          path: dist
+
+  release-tag:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.ref, 'refs/tags/v')
+    needs: unit-test
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: built-library
+      - run: npm version $GITHUB_REF_NAME
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
